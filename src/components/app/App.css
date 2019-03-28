@@ -1,0 +1,23 @@
+header {
+    background-image: url('../../assets/img/header.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+}
+
+a.banner > .row {
+    background-image: url('../../assets/img/logo.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    margin-right: 10px;
+}
+
+a.banner,
+a.banner:hover,
+a.banner:focus,
+a.banner:visited  {
+    text-decoration: none;
+    color: #142a39c4;
+
+}

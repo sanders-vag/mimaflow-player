@@ -1,0 +1,34 @@
+.btn-search {
+    background-color: rgb(231, 76, 60);
+    border-color: rgb(231, 76, 60);
+    color: white;
+}
+
+.btn-search:hover {
+    background-color: rgb(231, 76, 60);
+    border-color: rgb(231, 76, 60);
+}
+
+.btn-search:disabled {
+    background-color: darkgray;
+    border-color: darkgray;
+    cursor: not-allowed;
+}
+
+.clear {
+    padding: 0 10px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 0px;
+    top: 2px;
+    font-size: 200%;
+    font-weight: bold;
+    color: lightgray;
+    display: flex;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}

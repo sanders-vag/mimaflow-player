@@ -1,0 +1,15 @@
+.no-tracks,
+.total-tracks {
+    font-style: italic;
+    color: darkgray;
+}
+
+
+.list-title {
+    border: none;
+    font-weight: bold;
+}
+
+.list-title > div.row {
+    padding-left: 32px;
+}

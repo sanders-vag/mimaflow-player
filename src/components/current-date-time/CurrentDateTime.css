@@ -1,0 +1,9 @@
+.current-date-time {
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 16px;
+  background-color: #899ba524;
+  color: #7f868a;
+}
