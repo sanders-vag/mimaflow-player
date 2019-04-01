@@ -31,8 +31,8 @@ Cypress.Commands.add("getToken", () => {
   Cypress.log({
     name: "getTokenFromSpotifyAPI"
   });
-  const credentials = Cypress.env('REACT_APP_OAUTH_CLIENT_CREDENTIALS');
-  const auth = `Basic ${credentials}`
+  const credentials = Cypress.env("REACT_APP_OAUTH_CLIENT_CREDENTIALS");
+  const auth = `Basic ${credentials}`;
 
   const options = {
     method: "POST",

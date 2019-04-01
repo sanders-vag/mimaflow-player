@@ -10,8 +10,23 @@
 
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
+const fs = require("fs-extra");
+const path = require("path");
+
+const getConfigurationFile = env => {
+  const pathToConfigFile = path.resolve(".", "cypress/config", `${env}.json`);
+
+  return fs.readJson(pathToConfigFile);
+};
 
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
-}
+  config.env = config.env || {};
+  // you could extract only specific variables
+  // and rename them if necessary
+
+  const environment = config.env.configFile || "development";
+
+  return getConfigurationFile(environment);
+};
