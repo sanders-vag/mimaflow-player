@@ -3,8 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./OauthToken.css";
 
-const CLIENT_ID = "119cf81261ee4ac5b7b49e093c8fce72";
-const REDIRECT_URI = "http://localhost:3000";
+//const CLIENT_ID = "119cf81261ee4ac5b7b49e093c8fce72";
+const CLIENT_ID = process.env.REACT_APP_OAUTH_CLIENT_ID;
+const REDIRECT_URI = process.env.REACT_APP_OAUTH_REDIRECT_URI;
 const AUTH_URI = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=token`;
 
 const OauthToken = props => {
