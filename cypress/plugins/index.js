@@ -26,7 +26,7 @@ module.exports = (on, config) => {
   // you could extract only specific variables
   // and rename them if necessary
 
-  const environment = config.env.configFile || "development";
+  const environment = config.env.environment || "development";
 
   return getConfigurationFile(environment);
 };

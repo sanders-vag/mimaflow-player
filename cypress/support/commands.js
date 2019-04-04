@@ -50,9 +50,4 @@ Cypress.Commands.add("getToken", () => {
     localStorage.setItem("token", resp.body.access_token);
     return resp.body.access_token;
   });
-
-  /*from(cy.request(options)).pipe(
-    map(resp => resp.body.access_token),
-    tap(token => localStorage.setItem("token", token))
-  );*/
 });

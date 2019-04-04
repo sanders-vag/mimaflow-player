@@ -1,27 +1,33 @@
-const audios = [];
+let audio;
 
 const shouldPlaySong = () => {
   cy.wrap(null).should(() => {
-    audios.forEach(aud => expect(aud.currentTime).to.be.above(0));
+    expect(audio.currentTime).to.be.above(0);
+  });
+};
+
+const stubAudio = () => {
+  cy.window().then(win => {
+    cy.stub(win, "Audio").callsFake(url => {
+      const aud = new Audio(url);
+      audio = aud;
+      return aud;
+    });
   });
 };
 
 describe("Player tests", () => {
-  it("should be able to play and pause a song", () => {
+  before(() => {
     expect(localStorage.getItem("token")).to.be.null;
     cy.getToken().then(token => {
-      expect(localStorage.getItem("token")).to.be.eq(token);
+      expect(localStorage.getItem("token")).to.be.equal(token);
     });
-    cy.visit("/", {
-      onBeforeLoad: win => {
-        cy.stub(win, "Audio").callsFake(url => {
-          const aud = new Audio(url);
-          audios.push(aud);
-          return aud;
-        });
-      }
-    });
+  });
 
+  it("should be able to play and pause a song", () => {
+    
+    cy.visit("/");
+    stubAudio();
     cy.get("[data-cy=search-term]")
       .focus()
       .type("take on me")
@@ -33,11 +39,11 @@ describe("Player tests", () => {
       .filter(".show")
       .first()
       .click();
+    expect(audio).to.be.defined;
     cy.get(".fa-play-circle").should("have.length", 9);
     cy.get(".fa-pause-circle").should("have.length", 1);
     cy.wait(2000);
     shouldPlaySong();
-    cy.wait(500);
     cy.get(".fa-pause-circle")
       .filter(".show")
       .first()

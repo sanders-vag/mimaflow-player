@@ -1,0 +1,78 @@
+{
+  "tracks": {
+    "items": [
+      {
+        "id": "23344556",
+        "name": "Bohemian Rhapsody",
+        "album": {
+          "name": "A night at the opera",
+          "images": [
+            {
+              "url": ""
+            },
+            {
+              "url": ""
+            },
+            {
+              "url": "https://i.scdn.co/image/16f066184e92b296f9a202a326633a934607cb88"
+            }
+          ]
+        },
+        "artists": [
+          {
+            "id": "1434324324",
+            "name": "Queen"
+          }
+        ]
+      },
+      {
+        "id": "990038833",
+        "name": "Don't stop me now",
+        "album": {
+          "name": "Jazz",
+          "images": [
+            {
+              "url": ""
+            },
+            {
+              "url": ""
+            },
+            {
+              "url": "https://i.scdn.co/image/9d4932142928310f8e4d00d20e26192100edb216"
+            }
+          ]
+        },
+        "artists": [
+          {
+            "id": "1434324324",
+            "name": "Queen"
+          }
+        ]
+      },
+      {
+        "id": "7768888",
+        "name": "Another one bites the dust",
+        "album": {
+          "name": "The game",
+          "images": [
+            {
+              "url": ""
+            },
+            {
+              "url": ""
+            },
+            {
+              "url": "https://i.scdn.co/image/26b0d4f8f5b866bb81f74ad3091a878d9c1c28b0"
+            }
+          ]
+        },
+        "artists": [
+          {
+            "id": "1434324324",
+            "name": "Queen"
+          }
+        ]
+      }
+    ]
+  }
+}

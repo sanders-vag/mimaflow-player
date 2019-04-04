@@ -34,7 +34,7 @@ $ yarn test
 
 ### e2e configuration
 
-You must provide your credentials for [OAuth2 client_credentials flow](https://developer.spotify.com/documentation/general/guides/authorization-guide/#client-credentials-flow), as `client_id:client_secret` in Base64 format in the variable `REACT_APP_OAUTH_CLIENT_CREDENTIALS` declared in the `cypress.json` file.
+You must provide your credentials for [OAuth2 client_credentials flow](https://developer.spotify.com/documentation/general/guides/authorization-guide/#client-credentials-flow), as `client_id:client_secret` in Base64 format in the variable `REACT_APP_OAUTH_CLIENT_CREDENTIALS` declared in the `cypress/development.json` file.
 
 ### Running e2e tests
 
